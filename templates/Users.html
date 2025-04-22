@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/users_style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Сотрудники</title>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/admin">Панель Директора</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <section>
+            <h2 style="text-align: center;">Список привязанных сотрудников</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Телеграмма</th>
+                        <th>Имя Фамилия</th>
+                        <th>Код</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="{{url_for('static', filename='users_script.js')}}"></script>
+</body>
+</html>

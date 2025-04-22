@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель Директора</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/stylesadmin.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Главная</a></li>
+                    <li><a href="{{ url_for('admin') }}">Панель Директора</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <div class="container">
+            <h1>Панель управления</h1>
+            <div class="block-container">
+                <a href="{{ url_for('table') }}" class="block">
+                    <h2>Интеграция таблицы</h2>
+                </a>
+                <a href="{{ url_for('users') }}" class="block">
+                    <h2>Сотрудники</h2>
+                </a>
+                <a href="{{ url_for('schedule') }}" class="block">
+                    <h2>Коррекция расписания</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

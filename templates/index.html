@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=1900, initial-scale=1">
+    <title>PlanGen</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Главная</a></li>
+                    <li><a href="{{ url_for('admin') }}">Панель Директора</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        
+        <section id="table1">
+            <h2 style="text-align: center;">Расписание</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Час</th>
+                        <th>Имя Фамилия</th>
+                        <th>Точка</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule">
+                    <!--Заполение через JavaScript-->
+                    
+                </tbody>
+            </table>
+                
+            
+        </section>
+
+        
+        <button class="switch_table">Сменить таблицу</button>
+    </main>
+    
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

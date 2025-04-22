@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/schedule_styles.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/admin">Панель Директора</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form id="timeForm">
+                <label for="timeSelect">Час:</label>
+                <select id="timeSelect">
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                </select>
+                
+                <label for="pointSelect">Точка:</label>
+                <select id="pointSelect">
+                    <option value="Точка 1">Точка 1</option>
+                    <option value="Точка 2">Точка 2</option>
+                    <option value="all">Все точки</option>
+                </select>
+                
+                <label for="removeInput">Убрать:</label>
+                <input type="text" id="removeInput" placeholder="Введите имя для удаления">
+                
+                <label for="addInput">Добавить:</label>
+                <input type="text" id="addInput" placeholder="Введите имя для добавления">
+                
+                <button type="button" id="submitButton">Отправить</button>
+            </form>
+        </div>
+
+        <div class="json-container">
+            <h3>Текущие данные расписания:</h3>
+            <pre id="jsonOutput"></pre>
+        </div>
+    </main>
+
+    <script src="{{url_for('static', filename='schedule.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеграция</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/table.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/admin">Панель Директора</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <div class="container">
+            <h1>Введите ссылку</h1>
+            <form id="linkForm">
+                <input type="url" id="linkInput" placeholder="https://example.com" required>
+                <button type="submit" id="btn">Подтвердить</button>
+            </form>
+            <form action="/save_new_base" method="POST">
+                <button type="submit" id="syncBtn" style="margin-top: 10px;">Синхронизировать</button>
+            </form>
+        </div>
+    </main>
+    
+
+    <script src="{{url_for('static', filename='tablescr.js')}}"></script>
+</body>
+</html>
