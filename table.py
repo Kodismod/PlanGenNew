@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from algor import generate_schedule
 import os
 
-path = "C:\\Users\\A L E K S\\Desktop\\PlanGen\\static\\data\\plangen.json"
+path = os.path.join('static', 'data', 'plangen.json')
 # Настройка аутентификации
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(path, scope)

@@ -1,7 +1,7 @@
 import random
 from collections import defaultdict
 import json
-
+import os
 
 def generate_schedule(names):
     hours = [f"{h:02d}:00" for h in range(9, 22)]
@@ -9,7 +9,7 @@ def generate_schedule(names):
     schedule = defaultdict(lambda: {'Точка 1': [], 'Точка 2': []})
     rest_count = {name: 0 for name in names}
 
-    with open('C:\\Users\\A L E K S\\Desktop\\PlanGen\\static\\data\\schedule_local.json', 'w', encoding='utf-8') as f:
+    with open(os.path.join('static', 'data', 'schedule_local.json'), 'w', encoding='utf-8') as f:
         f.write('{\n')  
         for i, hour in enumerate(hours):
             available_names = names.copy()

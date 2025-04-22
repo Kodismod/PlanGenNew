@@ -1,11 +1,9 @@
 from flask import Flask,render_template, request, jsonify
 import json
-from flask_cors import CORS, cross_origin
 import os
 from table import process_table_to_json
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
-CORS(app)
 
 filename = os.path.join(app.static_folder, 'data', 'schedule_local.json')
 
